@@ -8,9 +8,26 @@
 <body>
     <p id="nice">text</p>
     <script>
-        student = {};
-        student.class = 5;
-        document.getElementById('nice').innerText = student.class;
+        function azaza(ananas) {
+            this.ananas = ananas;
+        }
+        const ananas = new azaza("ananas");
+        console.log(ananas.ananas);
+        const obj = {
+    name: "Alice",
+    greet: function() {
+        const inner = () => {
+            console.log("Hello, " + this.name);
+        };
+        inner();
+    }
+};
+    const next = { name: "Alice", age: 25 };
+    const jsonString = JSON.stringify(obj);
+    console.log(jsonString);
+    const jsonString2 = '{"name":"Alice","age":25}';
+    const obj2 = JSON.parse(jsonString);
+    console.log(obj2)
     </script>
 </body>
 </html>
